@@ -86,3 +86,32 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+// color por defecto para el background en ios md y wphone
+$background-ios-color: black;
+$background-md-color: black;
+$background-wp-color: black;
+
+*{
+  margin: 0px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+h1{
+  color: white;
+  font-size: 32px;
+}

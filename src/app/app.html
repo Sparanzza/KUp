@@ -1,1 +1,8 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-content *ngIf="showSplash">
+    <splash></splash>
+</ion-content>
+
+<ion-nav
+*ngIf="!showSplash" 
+[root]="rootPage"></ion-nav>
+
