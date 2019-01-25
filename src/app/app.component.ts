@@ -24,7 +24,7 @@ export class MyApp {
 
       // Es un timer que pondrá a false para quitar el splash en la 
       // Etiqueta div con el ngIf
-      timer(3000).subscribe( () => {
+      timer(0).subscribe( () => {
         this.showSplash = false;
       });
     });
