@@ -13,14 +13,20 @@ import { Component, Input } from '@angular/core';
 export class BtnMainMenuComponent {
 
   @Input() btnText: string;
-  bLightClicked: boolean;
+  public bLightClicked: boolean;
 
   constructor() {  
     this.bLightClicked = false;
   }
 
-  btnMainMenuClickEvent(){
-    // TODO
+  btnTouchstart(){
+    console.log('btnTouchstart()');
+    this.bLightClicked = true;
+  }
+
+  btnTouchend(){
+    console.log('btnTouchend()');
+    this.bLightClicked = false;
   }
 
 
