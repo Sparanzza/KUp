@@ -1,52 +1,44 @@
-:host() {
-	background-color: transparent;
-	transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-	transform-style: preserve-3d;
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-  }
-  .text-big-logo {
+.text-big-logo {
 	position: absolute;
 	color: rgb(255, 255, 255);
 	font-family: "Titillium Web";
 	font-weight: 800;
 	text-shadow: rgb(201, 207, 206) 0px 1px 0px, rgb(188, 194, 194) 0px 2px 0px, rgb(175, 182, 182) 0px 3px 0px, rgb(164, 173, 172) 0px 4px 0px, rgb(159, 168, 167) 0px 5px 0px, rgb(153, 163, 162) 0px 6px 0px, rgb(151, 161, 160) 0px 7px 0px, rgb(148, 158, 157) 0px 8px 0px, rgba(0, 0, 0, 0.05) 0px 0px 5px, rgba(0, 0, 0, 0.2) 0px 1px 3px, rgba(0, 0, 0, 0.2) 0px 3px 5px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.2) 0px 10px 10px, rgba(0, 0, 0, 0.3) 0px 20px 20px;
-	font-size: 200px;
-	left: 178px;
-	top: 27.08%;
+	font-size: 120px;
+	width: 350px;
+	height: 350px;
+	text-align: center;
+	vertical-align: middle;
+	top:60px;
   }
   .big-logo__border-gradient {
 	position: absolute;
 	stroke: url("#grad1237");
 	fill: none;
-	width: 600px;
-	height: 600px;
-	stroke-width: 16px;
+	width: 350px;
+	height: 350px;
+	stroke-width: 12px;
 	stroke-dasharray: 0;
 	stroke-dashoffset: 0;
-	left: 60px;
-	top: 60px;
+
   }
   .color-bg-reference {
 	position: absolute;
-	width: 720px;
-	height: 720px;
+	width: 350px;
+	height: 350px;
 	left: 0px;
 	top: 0px;
 	background-image: none;
 	background-color: rgb(39, 42, 52);
   }
   .big-logo__blur-filter {
-	filter: blur(16px);
+	// filter: blur(8px);
   }
   .main-big-logo {
-	
-	position: absolute;
-	top: -15%;
-	left: 0%;
-	width: 50%;
-	height: 720px;
-	transform: scale3d(0.35, 0.35, 0.35);
+	left: 0px;
+	top: 0px;
+	width: 350px;
+	height: 350px;
 	transform-style: preserve-3d;
+	position: absolute;
   }

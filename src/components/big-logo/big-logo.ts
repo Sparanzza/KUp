@@ -15,8 +15,7 @@ export class BigLogoComponent {
   text: string;
 
   constructor() {
-    console.log('Hello BigLogoComponent Component');
-    this.text = 'Hello World';
+  
   }
 
 }

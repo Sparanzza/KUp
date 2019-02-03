@@ -38,7 +38,7 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
 );
 
 
@@ -89,9 +89,9 @@ $colors: (
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900');
 
 // color por defecto para el background en ios md y wphone
-$background-ios-color: black;
-$background-md-color: black;
-$background-wp-color: black;
+$background-ios-color: transparent;
+$background-md-color: transparent;
+$background-wp-color: transparent;
 
 *{
   margin: 0px;
