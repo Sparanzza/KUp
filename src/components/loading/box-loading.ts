@@ -7,16 +7,14 @@ import { Component } from '@angular/core';
  * Components.
  */
 @Component({
-  selector: 'loading',
-  templateUrl: 'loading.html'
+  selector: 'box-loading',
+  templateUrl: 'box-loading.html'
 })
 export class LoadingComponent {
 
   text: string;
 
   constructor() {
-    console.log('Hello ComponentsLoadingComponent Component');
-    this.text = 'Hello World';
   }
 
 }

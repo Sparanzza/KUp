@@ -16,10 +16,16 @@ btn-main-menu{
     position:relative;
     width: 243px;
     height: 42px;
-    background: red; 
     top:0px;
     left:0px;
 }
+
+box-loading{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
 .center-loader{
     position: absolute;
     width: 100%;
