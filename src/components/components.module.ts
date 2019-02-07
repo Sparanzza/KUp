@@ -5,12 +5,16 @@ import { BtnMainMenuComponent } from './btn-main-menu/btn-main-menu';
 import { CommonModule } from "@angular/common";
 import { BigLogoComponent } from './big-logo/big-logo';
 import { IonicModule } from 'ionic-angular';
+import { LoadingComponent } from './loading/loading';
+import { ProgressBarComponent } from './progress-bar/progress-bar';
 
 @NgModule({
 	declarations: [SplashComponent,
     MainMenuBgComponent,
     BtnMainMenuComponent,
-    BigLogoComponent],
+    BigLogoComponent,
+    LoadingComponent,
+    ProgressBarComponent],
     imports: [
 
         CommonModule,
@@ -19,6 +23,8 @@ import { IonicModule } from 'ionic-angular';
 	exports: [SplashComponent,
     MainMenuBgComponent,
     BtnMainMenuComponent,
-    BigLogoComponent]
+    BigLogoComponent,
+    LoadingComponent,
+    ProgressBarComponent]
 })
 export class ComponentsModule {}
