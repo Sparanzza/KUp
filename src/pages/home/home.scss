@@ -1,7 +1,6 @@
-btn-main-menu{
-    top: 0px;
+main-menu-bg{
+    top : 0px;
     left: 0px;
-    position: absolute;
 }
 
 big-logo{
@@ -13,11 +12,11 @@ big-logo{
 }
 
 btn-main-menu{
-    position:relative;
+    position:absolute;
     width: 243px;
     height: 42px;
-    top:0px;
-    left:0px;
+    bottom:50px;
+    left:50%;
 }
 
 box-loading{
@@ -32,4 +31,5 @@ box-loading{
     height: 100px;
     background: red;
 }
+
 
