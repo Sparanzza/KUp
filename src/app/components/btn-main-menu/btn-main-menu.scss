@@ -1,0 +1,41 @@
+.btn-base-color {
+    width: 243px;
+    left: 0px;
+    top: 0px;
+    height: 42px;
+    background-color: var(--kup-primary);
+    border-radius: 22px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px 0px;
+    position: absolute;
+    text-align: center;
+    display: table;
+  }
+  .btn-base-color-glow {
+    width: 243px;
+    left: 0px;
+    top: 0px;
+    height: 42px;
+    background-color: var(--kup-light-primary);
+    border-radius: 22px;
+    opacity:0.5;
+    position: absolute;
+  }
+  .btn-text {
+    color: rgb(41, 46, 56);
+    font-family: "Titillium Web";
+    font-weight: 700;
+    height: 24px;
+    line-height: 24px;
+    width: 124px;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    margin: auto;
+    font-size: 16px
+  }
+  .main-btn {
+    position: relative;
+    left: -122px;
+    top: 0px;
+  }

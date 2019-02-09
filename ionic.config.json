@@ -1,7 +1,7 @@
 {
-  "name": "kup",
+  "name": "KUp",
   "integrations": {
     "cordova": {}
   },
-  "type": "ionic-angular"
+  "type": "angular"
 }
