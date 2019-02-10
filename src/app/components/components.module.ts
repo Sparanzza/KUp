@@ -7,6 +7,8 @@ import { BigLogoComponent } from './big-logo/big-logo';
 import { IonicModule } from '@ionic/angular';
 import { LoadingComponent } from './loading/box-loading';
 import { ProgressBarComponent } from './progress-bar/progress-bar';
+import { CoverUpComponent } from './cover-up/cover-up.component';
+import { GoogleAccountComponent } from './google-account/google-account.component';
 
 @NgModule({
     declarations: [SplashComponent,
@@ -14,7 +16,9 @@ import { ProgressBarComponent } from './progress-bar/progress-bar';
         BtnMainMenuComponent,
         BigLogoComponent,
         LoadingComponent,
-        ProgressBarComponent],
+        ProgressBarComponent,
+        CoverUpComponent,
+        GoogleAccountComponent],
     imports: [
 
             CommonModule,
@@ -25,6 +29,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar';
         BtnMainMenuComponent,
         BigLogoComponent,
         LoadingComponent,
-        ProgressBarComponent]
+        ProgressBarComponent,
+        CoverUpComponent]
 })
 export class ComponentsModule {}

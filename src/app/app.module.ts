@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
 import { HomePageModule } from './pages/home/home.module';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     ComponentsModule,
-    HomePageModule
+    HomePageModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,

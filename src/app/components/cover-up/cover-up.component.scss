@@ -1,0 +1,23 @@
+.main-cover {
+    position: absolute;
+    background-color: rgb(33, 50, 79);
+    width: 100%;
+    bottom: 0px;
+    height: 0%;
+    box-shadow: rgba(0, 27, 56, 0.5) 0px 2px 40px 0px;
+    transition : all 1s;
+  }
+
+  box-loading{
+      position: absolute;
+      top:40%;
+      left:50%;
+  }
+
+  in-band{
+    height: 90%;
+  }
+  out-band{
+    height: 0%;
+  }
+

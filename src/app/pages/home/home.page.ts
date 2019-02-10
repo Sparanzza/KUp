@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingStartService } from '../../services/loading-start.service';
 import { timer } from 'rxjs';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
+
+
 
 @Component({
   selector: 'app-home',
@@ -12,8 +15,14 @@ export class HomePage implements OnInit {
   progressBarValue = 0; // value progressBar local got from service
   isloadingEnd = false; // this var remove progress bar when finish
   isLoadStartOk = false; // check whether pass all functions from service
-  constructor( public lss: LoadingStartService) {
+  constructor(
+    private androidFullScreen: AndroidFullScreen,
+    public lss: LoadingStartService) {
     console.log( 'init HomePage');
+    this.androidFullScreen.isImmersiveModeSupported()
+    .then(() => console.log('Immersive mode supported'))
+    .catch(err => console.log(err));
+
   }
   // Life cycle Ionic 4
   // https://medium.com/@paulstelzer/ionic-4-and-the-lifecycle-hooks-4fe9eabb2864
