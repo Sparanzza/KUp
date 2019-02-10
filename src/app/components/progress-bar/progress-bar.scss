@@ -1,3 +1,60 @@
-progress-bar {
-
-}
+.base-color {
+    height: 2px;
+    background-color: rgb(74, 80, 95);
+    left: -50%;
+    width: 100%;
+    position: absolute;
+  }
+  .main-progress-bar {
+    bottom: 10%;
+    width: 80%;
+    left: 50%;
+    height: 20px;
+    position: absolute;
+  }
+  .fill-bar {
+    height: 2px;
+    background-color: var(--kup-light-primary);
+    left: -50%;
+    transform-origin: left top 0px;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+  }
+  .counter-point {
+    position: absolute;
+    background-image: none;
+    background-color: var(--kup-light-primary);
+    border-style: solid;
+    border-radius: 20px;
+    height: 22px;
+    width: 22px;
+    right: -10px;
+    border-width: 5px;
+    border-color: #1D2027;
+    top: -8px;
+  }
+  .number {
+    font-family: "Titillium Web";
+    font-weight: 700;
+    font-size: 40px;
+    vertical-align: baseline;
+    position: absolute;
+    top: -92px;
+    text-align: right;
+    color: var(--kup-light-primary);
+    left: -92px;
+    width: 100px;
+  }
+  .decimal-number {
+    left: 9px;
+    font-family: "Titillium Web";
+    font-weight: 700;
+    font-size: 20px;
+    vertical-align: baseline;
+    position: absolute;
+    top: -50px;
+    color: var(--kup-light-primary);
+    letter-spacing: 2px;
+  }
