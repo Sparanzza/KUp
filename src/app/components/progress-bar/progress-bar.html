@@ -1,10 +1,12 @@
 <!-- Generated template for the ProgressBarComponent component -->
 <div class="main-progress-bar">
   <div class="base-color"></div>
-  <div class="fill-bar gwd-gen-q0zrgwdanimation">
+  <div class="fill-bar gwd-gen-q0zrgwdanimation"
+  [ngStyle]="{'width.%': progressBarValue }">
     <div class="counter-point">
-      <p class="number">99</p>
-      <p class="decimal-number">,9%</p>
+      <p class="number">{{ progressBarValue | number:'1.0-0'}}</p>
+      <p class="decimal-number">
+        {{ (progressBarValue/100).toString() | slice:1:3 }}%</p>
     </div>
   </div>
 </div>

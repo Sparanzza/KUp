@@ -30,7 +30,7 @@ export class AppComponent {
 
       // Es un timer que pondrá a false para quitar el splash en la
       // Etiqueta div con el ngIf
-      timer(1000).subscribe( () => {
+      timer(2000).subscribe( () => {
         this.showSplash = false;
       });
     });

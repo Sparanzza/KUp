@@ -7,7 +7,7 @@
   }
   .main-progress-bar {
     bottom: 10%;
-    width: 80%;
+    width: 60%;
     left: 50%;
     height: 20px;
     position: absolute;
@@ -19,8 +19,8 @@
     transform-origin: left top 0px;
     transform-style: preserve-3d;
     position: relative;
-    transform: scale3d(1, 1, 1);
-    width: 50%;
+    width: 0%;
+    transition: all 1s;
   }
   .counter-point {
     position: absolute;
