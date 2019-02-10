@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['btn-main-menu.scss']
 })
 export class BtnMainMenuComponent {
-
+  @Input() iWidth = 243;
   @Input() btnText: string;
   public bLightClicked: boolean;
 

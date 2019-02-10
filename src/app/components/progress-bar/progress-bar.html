@@ -5,8 +5,14 @@
   [ngStyle]="{'width.%': progressBarValue }">
     <div class="counter-point">
       <p class="number">{{ progressBarValue | number:'1.0-0'}}</p>
-      <p class="decimal-number">
-        {{ (progressBarValue/100).toString() | slice:1:3 }}%</p>
+      <div *ngIf="progressBarValue < 100; else cienPercent" >
+        <p class="decimal-number">
+          {{ (progressBarValue/100).toString() | slice:1:3 }}%</p>
+      </div>
+      <ng-template #cienPercent>
+          <p class="decimal-number">%</p>
+      </ng-template>
+        
     </div>
   </div>
 </div>

@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ComponentsModule } from './components/components.module';
 import { HomePageModule } from './pages/home/home.module';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HomePageModule } from './pages/home/home.module';
   providers: [
     StatusBar,
     SplashScreen,
+    AndroidFullScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

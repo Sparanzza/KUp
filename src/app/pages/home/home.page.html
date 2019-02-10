@@ -8,7 +8,16 @@
     </ion-grid>
 </ion-content>
 
-
-
-<progress-bar 
+<!-- Progress Bar -->
+<progress-bar *ngIf="!isloadingEnd" 
 [progressBarValue] = 'progressBarValue'></progress-bar>
+
+<!-- Login -->
+<div *ngIf="isloadingEnd" class = "btn-logins">
+    <btn-main-menu
+    [iWidth]='175'
+    [btnText] = "'Google Account'"> </btn-main-menu>
+    <btn-main-menu 
+    [iWidth]='175'
+    [btnText] = "'Guest'"> </btn-main-menu>
+</div>

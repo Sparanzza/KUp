@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingStartService } from '../../services/loading-start.service';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,8 @@ import { LoadingStartService } from '../../services/loading-start.service';
 export class HomePage implements OnInit {
 
   progressBarValue = 0; // value progressBar local got from service
-
+  isloadingEnd = false; // this var remove progress bar when finish
+  isLoadStartOk = false; // check whether pass all functions from service
   constructor( public lss: LoadingStartService) {
     console.log( 'init HomePage');
   }
@@ -18,9 +20,15 @@ export class HomePage implements OnInit {
   ngOnInit(): void {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     // Add 'implements OnInit' to the class.
-    this.progressBarValue = this.lss.percent;
-    this.lss.loadingGameInit().subscribe( () => {
-      this.progressBarValue = 99.4;
+
+    this.lss.checkConnection();
+
+    timer(500).subscribe( () => {
+        this.progressBarValue = 100;
+    });
+
+    timer(2000).subscribe( () => {
+        this.isloadingEnd = true;
     });
   }
 }

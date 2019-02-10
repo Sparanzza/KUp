@@ -1,8 +1,15 @@
-<div class="main-btn">
-  <div (touchstart)="btnTouchstart()" (touchend)="btnTouchend()" class="btn-base-color">
+<div class="main-btn"   [ngStyle]="{'left.px': -iWidth / 2 }">
+  <div 
+  [ngStyle]="{'width.px': iWidth }"
+  (touchstart)="btnTouchstart()"
+  (touchend)="btnTouchend()"
+  class="btn-base-color">
     <p class="btn-text">{{btnText}}</p>
   </div>
-  <div *ngIf="bLightClicked" class="btn-base-color-glow"></div>
+  <div 
+  [ngStyle]="{'width.px': iWidth }"
+  *ngIf="bLightClicked"
+  class="btn-base-color-glow"></div>
   <!-- glow active para evento de click -->
 
 </div>
