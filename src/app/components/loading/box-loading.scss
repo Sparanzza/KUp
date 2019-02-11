@@ -5,7 +5,10 @@
         position: relative;
         height: 100px;
         width: 70px;
+        transform: translateZ(0);
+        transform-style: preserve-3d;
         }
+        
         .loading-text {
         font-family: "Titillium Web";
         color: rgb(255, 255, 255);
@@ -23,6 +26,8 @@
         bottom: 0px;
         width: 70px;
         height: 70px;
+        transform: translateZ(0);
+        transform-style: preserve-3d;
         }
         .white-box {
         width: 20px;
@@ -31,6 +36,8 @@
         position: absolute;
         left: 0px;
         top: 0px;
+        transform: translateZ(0);
+        transform-style: preserve-3d;
         }
         @keyframes gwd-gen-omydgwdanimation_gwd-keyframes {
         0% {
