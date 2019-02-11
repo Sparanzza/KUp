@@ -1,4 +1,22 @@
+
+<!-- https://ionicframework.com/docs/api/virtual-scroll/ -->
 <div 
 [ngStyle]="{'height.%': coverHeight}"
-class="main-cover"></div>
+class="main-cover">
+
+<ion-content>
+  
+    <ion-virtual-scroll [items]="countries" 
+    aproxItemHeight= "50px">
+      <ion-item *virtualItem="let country" text-center>
+        <ion-avatar item-start>
+          <ion-img [src]="country.flag"></ion-img>
+        </ion-avatar>
+        <ion-label text-center>{{ country.name }}</ion-label>
+      </ion-item>
+    </ion-virtual-scroll>
+  
+  </ion-content>
+</div>
+
 <box-loading *ngIf="isLoading" ></box-loading>

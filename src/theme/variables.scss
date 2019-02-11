@@ -78,10 +78,21 @@
   
   // global variables colors
   --ion-background-color:black;
+  --ion-tab-bar-background : transparent;
+  --ion-item-background:transparent;
+  --ion-item-color:white;
   --kup-primary: rgb(0, 201, 255);
   --kup-light-primary: rgb(124, 235, 255);
   --kup-coverup: #21324F;
-  ;
+
+
 }
+
+ion-virtual-scroll{
+  --ion-background-color:transparent;
+}
+
+ion-item{ --ion-background-color:transparent;}
+ion-content{ --ion-background-color:transparent;}
 
 
