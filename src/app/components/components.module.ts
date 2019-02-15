@@ -9,6 +9,7 @@ import { LoadingComponent } from './loading/box-loading';
 import { ProgressBarComponent } from './progress-bar/progress-bar';
 import { CoverUpComponent } from './cover-up/cover-up.component';
 import { GoogleAccountComponent } from './google-account/google-account.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
     declarations: [SplashComponent,
@@ -18,7 +19,10 @@ import { GoogleAccountComponent } from './google-account/google-account.componen
         LoadingComponent,
         ProgressBarComponent,
         CoverUpComponent,
-        GoogleAccountComponent],
+        GoogleAccountComponent,
+        DropdownComponent,
+        GoogleAccountComponent
+    ],
     imports: [
 
             CommonModule,
@@ -30,6 +34,8 @@ import { GoogleAccountComponent } from './google-account/google-account.componen
         BigLogoComponent,
         LoadingComponent,
         ProgressBarComponent,
-        CoverUpComponent]
+        CoverUpComponent,
+        GoogleAccountComponent
+    ]
 })
 export class ComponentsModule {}

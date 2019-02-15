@@ -19,17 +19,17 @@ export class CoverUpComponent implements AfterViewInit {
    }
 
   ngAfterViewInit() {
-    // https://stackoverflow.com/questions/39787038/how-to-manage-angular2-expression-has-changed-after-it-was-checked-exception-w
     console.log('ngAfterViewInit');
+    this.isLoading = true;
+    // https://stackoverflow.com/questions/39787038/how-to-manage-angular2-expression-has-changed-after-it-was-checked-exception-w
     this.cs.getlistCountries().subscribe( countries => {
-      this.coverHeight = 90;
-      this.isLoading = true;
-      console.log(countries);
+      this.isLoading = false;
       this.countries = countries;
-      this.cdRef.detectChanges();
-      timer(3000).subscribe( () => {
-        this.isLoading = false;
+      console.log(countries);
+      timer(200).subscribe( () => {
       });
+      this.coverHeight = 90;
+      this.cdRef.detectChanges();
     });
 
   }
