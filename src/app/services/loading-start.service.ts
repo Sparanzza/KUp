@@ -1,15 +1,25 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { timer, Observable } from 'rxjs';
+import { User } from '../interfaces/user.interface';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoadingStartService {
 
-  MAINUSER: any;
+  // Initialize Cloud Firestore through Firebase
 
-  constructor() {
-    console.log('init LoadingStartService');
+  private itemDoc: AngularFirestoreCollection<User>;
+  item: Observable<User[]>;
+
+  constructor(private afs: AngularFirestore) {
+    this.itemDoc = afs.collection('users');
+    this.item = this.itemDoc.valueChanges();
+
+    this.item.subscribe( data => console.log(data));
+
   }
 
   // Init loading start page game

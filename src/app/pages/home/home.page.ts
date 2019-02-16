@@ -15,6 +15,7 @@ export class HomePage implements OnInit {
   progressBarValue = 0; // value progressBar local got from service
   isloadingEnd = false; // this var remove progress bar when finish
   isLoadStartOk = false; // check whether pass all functions from service
+  isLogin = false;
   constructor(
     private androidFullScreen: AndroidFullScreen,
     public lss: LoadingStartService) {
@@ -39,5 +40,13 @@ export class HomePage implements OnInit {
     timer(2000).subscribe( () => {
         this.isloadingEnd = true;
     });
+  }
+
+  clickLogin(e) {
+    console.log(e);
+    this.isLogin = true;
+  }
+  clickGuest(e) {
+    console.log(e);
   }
 }

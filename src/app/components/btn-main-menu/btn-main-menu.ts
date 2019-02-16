@@ -21,14 +21,11 @@ export class BtnMainMenuComponent {
   }
 
   btnTouchstart() {
-    console.log('btnTouchstart()');
     this.bLightClicked = true;
   }
 
   btnTouchend() {
-    console.log('btnTouchend()');
     this.bLightClicked = false;
   }
-
 
 }

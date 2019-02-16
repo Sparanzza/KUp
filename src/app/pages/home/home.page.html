@@ -8,16 +8,23 @@ this bg is in ion content to stay over the background web -->
         </ion-row>
     </ion-grid>
 </ion-content>
+
 <!-- Progress Bar -->
 <progress-bar *ngIf="!isloadingEnd" [progressBarValue] = 'progressBarValue'></progress-bar>
+
 <!-- Login -->
-<div *ngIf="isloadingEnd" class = "btn-logins">
-    <btn-main-menu [iWidth]='175' [btnText] = "'Google Account'"> </btn-main-menu>
-    <btn-main-menu [iWidth]='175' [btnText] = "'Guest'"> </btn-main-menu>
+<div *ngIf="!isLogin" >
+    <div *ngIf="isloadingEnd" class = "btn-logins">
+        <btn-main-menu 
+        (touchstart)="clickLogin($event)"
+        [iWidth]='175' [btnText] = "'Login'"> </btn-main-menu>
+        <btn-main-menu
+        (touchstart)="clickGuest($event)"
+        [iWidth]='175' [btnText] = "'Guest'"> </btn-main-menu>
+    </div>
 </div>
 
-<app-google-account></app-google-account>
-
 <!-- Nationality and Conditions for google accounts -->
+<app-google-account *ngIf="isLogin" ></app-google-account>
 <!-- <app-cover-up *ngIf="isloadingEnd"></app-cover-up> -->
 
