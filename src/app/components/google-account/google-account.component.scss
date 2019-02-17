@@ -6,15 +6,15 @@
     box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 70px;
     margin: 0px auto;
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
   }
   .fullname-text {
       background-image: none;
       background-color: transparent;
       color: var(--kup-secondary-blue);
       font-family: "Titillium Web";
-      font-size: 26px;
+      font-size: 20px;
       margin: 0px auto;
       width: 400px;
       height: 120px;
@@ -28,7 +28,7 @@
         color: var( --kup-primary);
         font-family: "Titillium Web";
         font-weight: bold;
-        font-size: 48px;
+        font-size: 40px;
         width: 100%;
         text-align: center;
         margin: 0px auto;
@@ -60,7 +60,7 @@
     .username-text {
         font-family: "Titillium Web";
         color: var(--kup-secondary-blue);
-        font-size: 18px;
+        font-size: 14px;
         text-align: center;
         width: 80%;
         margin: 0px auto;

@@ -50,3 +50,7 @@ export class HomePage implements OnInit {
     console.log(e);
   }
 }
+
+// https://github.com/ionic-team/ionic-cli/issues/559
+// rm -rf platforms/ plugins/
+// cordova prepare

@@ -1,13 +1,8 @@
-<!-- Main Centered big logo and bg , 
-this bg is in ion content to stay over the background web -->
-<ion-content>
-    <main-menu-bg></main-menu-bg>
-    <ion-grid>
-        <ion-row justify-content-center>
-            <big-logo></big-logo>
-        </ion-row>
-    </ion-grid>
-</ion-content>
+<!-- Background with main buttons menu -->
+<main-menu-bg></main-menu-bg>
+
+<!-- logo with cronometer -->
+<big-logo></big-logo>
 
 <!-- Progress Bar -->
 <progress-bar *ngIf="!isloadingEnd" [progressBarValue] = 'progressBarValue'></progress-bar>

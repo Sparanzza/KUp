@@ -29,7 +29,7 @@ export class AppComponent {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      // this.splashScreen.hide();
     // Fullscreen mode
       // Es un timer que pondrá a false para quitar el splash en la
       // Etiqueta div con el ngIf
