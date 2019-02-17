@@ -8,6 +8,8 @@
     position: relative;
     height: 250px;
     width: 250px;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
   }
   .fullname-text {
       background-image: none;
@@ -20,7 +22,7 @@
       height: 120px;
       text-align: center;
       position: relative;
-      top: 20px;
+      top: 5px;
     }
     .tooltip-text {
         background-image: none;

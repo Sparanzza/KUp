@@ -1,14 +1,21 @@
 <box-loading *ngIf="!gotUser" ></box-loading>
 
 <div *ngIf="gotUser">
-  <div class="grp-data-account">
-    <div class="user-photo"></div>
+  <div class="grp-data-account animated ">
+    <div class="animated heartBeat user-photo"></div>
     <p class="tooltip-text">Username</p>
     <p class="fullname-text gwd-gen-kq70gwdanimation">First Name Second<br>
       First Surname</p>
     </div>
     <div class="grp-bottom">
-      <btn-main-menu [iWidth]='175' [btnText] = "'Nationality'"></btn-main-menu>
+      <btn-main-menu
+      (touchstart)="clickNationality()"
+      [iWidth]='175' [btnText] = "'Nationality'"></btn-main-menu>
       <p class="username-text">Select your nationality to get a quick search of your opponents</p>
     </div>
   </div>
+
+  <app-cover-up
+  *ngIf="isNationalityPushed"
+  (nationality) = "setNationalityUser($event)"
+  ></app-cover-up>

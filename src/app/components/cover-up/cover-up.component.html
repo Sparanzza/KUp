@@ -4,21 +4,42 @@
 [ngStyle]="{'height.%': coverHeight}"
 class="main-cover">
 
+    <div class="titleCover" *ngIf="showFlags" >
+        NATIONALITY
+    </div>
+    <div class="titleCover" *ngIf="showConditions">
+        CONDITIONS
+    </div>
+    <ion-content>
+        <ion-virtual-scroll
+        *ngIf="showFlags" 
+        [items]="countries"
+        aproxItemHeight= "350px">
+          <ion-item  *virtualItem="let country" text-center
+          (click) ="setNationality(country)">
+            <ion-avatar item-start>
+              <ion-img [src]="country.flag"></ion-img>
+            </ion-avatar>
+            <ion-label text-center>{{ country.name }}</ion-label>
+          </ion-item>
+        </ion-virtual-scroll>
+      </ion-content>
 
-
-
-<ion-content>
-    <ion-virtual-scroll [items]="countries" 
-    aproxItemHeight= "250px">
-      <ion-item *virtualItem="let country" text-center>
-        <ion-avatar item-start>
-          <ion-img [src]="country.flag"></ion-img>
-        </ion-avatar>
-        <ion-label text-center>{{ country.name }}</ion-label>
-      </ion-item>
-    </ion-virtual-scroll>
-  
-  </ion-content>
+      <!-- <ion-content *ngIf="showConditions">
+        <p class="textConditions">
+            conditions (...) conditions (...) conditions (...) 
+            conditions (...) conditions (...) conditions (...) 
+            conditions (...) conditions (...) conditions (...) 
+            conditions (...) conditions (...) conditions (...) 
+            conditions (...) conditions (...) conditions (...) 
+        </p>
+      </ion-content> -->
+      <div *ngIf="showConditions" class="btn-conditions">
+          <btn-main-menu 
+          [iWidth]='175' [btnText] = "'Decline'"> </btn-main-menu>
+          <btn-main-menu
+          [iWidth]='175' [btnText] = "'Accept'"> </btn-main-menu>
+      </div>
 </div>
 
 <box-loading *ngIf="isLoading" ></box-loading>

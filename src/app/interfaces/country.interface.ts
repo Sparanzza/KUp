@@ -1,4 +1,8 @@
-export interface Nationality {
-    name: string;
-    imageUrl: string;
+export class Nationality {
+    numericCode?: string;
+    codename?: string;
+    name?: string;
+    flag?: string;
+
+    constructor() {}
 }

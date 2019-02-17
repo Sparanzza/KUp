@@ -23,6 +23,7 @@ import { HomePageModule } from './pages/home/home.module';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,

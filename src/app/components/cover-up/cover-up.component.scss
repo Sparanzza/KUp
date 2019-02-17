@@ -32,6 +32,7 @@ ion-label{
     font-size: 12px;
     transform: translateZ(0);
     transform-style: preserve-3d;
+    opacity:.8;
 }
 
   in-band{
@@ -40,4 +41,45 @@ ion-label{
   out-band{
     height: 0%;
   }
+
+  .titleCover{
+    font-family: "Titillium Web";
+    font-weight: 200;
+    font-size: 32px;
+    text-align: center;
+    width: 100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    color: var(--kup-secondary-blue);
+  }
+
+  .textConditions{
+    font-family: "Titillium Web";
+    font-weight: 400;
+    font-size: 26px;
+    width: 100%;
+    height:100%;
+    color: var(--kup-secondary-blue);
+    position: relative;
+  }
+  .btn-conditions{
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 80px;
+  }
+
+  btn-main-menu{
+    margin: 0 auto;
+    position: relative;
+    width: 200px;
+    height: 42px;
+    display: block;
+    margin-bottom: 30px;
+    top: 0px;
+    display: inline-block;
+}
+  
+
+
 
