@@ -18,7 +18,7 @@
       font-family: "Titillium Web";
       font-size: 20px;
       margin: 0px auto;
-      width: 400px;
+      width: 80%;
       height: 120px;
       text-align: center;
       position: relative;
@@ -52,13 +52,13 @@
         position: absolute;
     }
     btn-main-menu{
-        width: 100%;
+        width: 50%;
         height: 60px;
         position: relative;
         left: 50%;
         top: 0;
     }
-    
+
     .username-text {
         font-family: "Titillium Web";
         color: var(--kup-secondary-blue);

@@ -25,7 +25,7 @@ class="main-cover">
         </ion-virtual-scroll>
       </ion-content>
 
-      <!-- <ion-content *ngIf="showConditions">
+      <ion-content *ngIf="showConditions">
         <p class="textConditions">
             conditions (...) conditions (...) conditions (...) 
             conditions (...) conditions (...) conditions (...) 
@@ -33,12 +33,12 @@ class="main-cover">
             conditions (...) conditions (...) conditions (...) 
             conditions (...) conditions (...) conditions (...) 
         </p>
-      </ion-content> -->
+      </ion-content>
       <div *ngIf="showConditions" class="btn-conditions">
-          <btn-main-menu 
-          [iWidth]='175' [btnText] = "'Decline'"> </btn-main-menu>
-          <btn-main-menu
-          [iWidth]='175' [btnText] = "'Accept'"> </btn-main-menu>
+          <btn-main-menu expand="block" class = "btn-left"
+          [iWidth]='150' [btnText] = "'Decline'"> </btn-main-menu>
+          <btn-main-menu  expand="block" class = "btn-right"
+          [iWidth]='150' [btnText] = "'Accept'"> </btn-main-menu>
       </div>
 </div>
 

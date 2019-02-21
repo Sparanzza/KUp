@@ -70,14 +70,27 @@ ion-label{
   }
 
   btn-main-menu{
-    margin: 0 auto;
+    margin: 5 auto;
     position: relative;
-    width: 200px;
+    width: 150px;
     height: 42px;
-    display: block;
+
     margin-bottom: 30px;
     top: 0px;
     display: inline-block;
+}
+
+.btn-left{
+
+  position: relative;
+  left: 50px;
+  float: right;
+}
+.btn-right{
+
+  position: relative;
+  float: left;
+  left: 100px;
 }
   
 

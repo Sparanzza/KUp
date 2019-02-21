@@ -33,8 +33,8 @@ export class CoverUpComponent implements AfterViewInit {
       this.countries = countries;
       this.isLoading = false;
       timer(200).subscribe( () => {
+        this.coverHeight = 90;
       });
-      this.coverHeight = 90;
     });
     this.cdRef.detectChanges();
   }

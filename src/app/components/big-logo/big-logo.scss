@@ -3,6 +3,8 @@
 	height: 350px;
 	margin: 0 auto;
 	position: relative;
+	transform: translateZ(0);
+	transform-style: preserve-3d;
 }
 
 .main-big-logo {
@@ -56,5 +58,5 @@
 	transform-style: preserve-3d;
   }
   .big-logo__blur-filter {
-	 filter: blur(8px);
+	//  filter: blur(8px);
   }
