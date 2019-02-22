@@ -28,15 +28,23 @@ export class CoverUpComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     // https://stackoverflow.com/questions/39787038/how-to-manage-angular2-expression-has-changed-after-it-was-checked-exception-w
-    this.isLoading = true;
-    this.cs.getlistCountries().subscribe( countries => {
-      this.countries = countries;
-      this.isLoading = false;
+    timer(100).subscribe( () => {
+      this.coverHeight = 90;
+      this.cdRef.detectChanges();
+      this.isLoading = true;
+     });
+
+
+    timer(500).subscribe( () => {
       timer(200).subscribe( () => {
-        this.coverHeight = 90;
+        this.cs.getlistCountries().subscribe( countries => {
+          this.countries = countries;
+          this.isLoading = false;
+          });
+        this.cdRef.detectChanges();
       });
     });
-    this.cdRef.detectChanges();
+
   }
   setNationality( event ) {
     this.showFlags = false;
