@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SystemService } from 'src/app/services/system.service';
 import { Nationality } from '../../interfaces/country.interface';
 
@@ -9,9 +9,11 @@ import { Nationality } from '../../interfaces/country.interface';
 })
 export class GoogleAccountComponent implements OnInit {
 
+  @Output() closeAccount: EventEmitter<any> = new EventEmitter<any>();
   isNationalityPushed = false;
   gotUser = false;
   nationality = new Nationality();
+  coverHeight = 0;
 
   constructor( public sys: SystemService) { }
 
@@ -42,5 +44,30 @@ export class GoogleAccountComponent implements OnInit {
     this.nationality.flag = event.flag;
     console.log( this.nationality);
   }
+
+  setConditions(event) {
+    console.log(`conditions ${event}`);
+    // If accept the conditions
+    if ( event === 'ACCEPT_CONDITIONS') {
+      // Save nationality
+      // Set Icon Nationatily
+      // Save the user with all data in farebase
+    }
+    if ( event === 'DECLINE_CONDITIONS') {
+      // delete user data temp
+      // come back to main menu
+    }
+
+    // Close animation
+    setTimeout(() => {
+      console.log('cerrar cover');
+      // https://angularfirebase.com/lessons/sharing-data-between-angular-components-four-methods/
+      this.coverHeight = 0; // Not Work!
+      this.closeAccount.emit();
+      setTimeout(() => {     }, 600);
+        // this.isNationalityPushed = false;
+    }, 600);
+  }
+
 
 }

@@ -18,4 +18,6 @@
   <app-cover-up
   *ngIf="isNationalityPushed"
   (nationality) = "setNationalityUser($event)"
+  (conditions) = "setConditions($event)"
+  [coverHeight] = "this.coverHeight"
   ></app-cover-up>

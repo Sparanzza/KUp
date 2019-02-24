@@ -2,7 +2,7 @@ import {  Component,
           AfterViewInit,
           ChangeDetectorRef,
           EventEmitter,
-          Output } from '@angular/core';
+          Output, Input } from '@angular/core';
 import { RestCountriesService } from 'src/app/services/rest-countries.service';
 import { timer } from 'rxjs';
 
@@ -13,17 +13,20 @@ import { timer } from 'rxjs';
 })
 export class CoverUpComponent implements AfterViewInit {
 
+  @Input() coverHeight;
   @Output() nationality: EventEmitter<any> = new EventEmitter<any>();
-  coverHeight = 0;
+  @Output() conditions: EventEmitter<any> = new EventEmitter<any>();
   isLoading = false;
   showFlags = true;
   showConditions = false;
   countries: any;
-
+  conditionsText: any;
 
   constructor(
     private cdRef: ChangeDetectorRef,
     private cs: RestCountriesService) {
+      this.conditionsText = this.readTextFile('./assets/conditions.txt');
+      console.log(this.conditionsText);
    }
 
   ngAfterViewInit() {
@@ -52,8 +55,29 @@ export class CoverUpComponent implements AfterViewInit {
     this.nationality.emit( event );
   }
 
-    acceptCondition() {
-      this.coverHeight = 0;
-    }
+   setConditions( event ) {
+
+    this.conditions.emit( event );
+    // this.coverHeight = 0;
+  }
+
+
+
+
+
+  readTextFile(file) {
+    const rawFile = new XMLHttpRequest();
+    // XMLHttpRequest (often abbreviated as XHR)
+    rawFile.open('GET', file, false); // open with method GET the file with the link file ,  false (synchronous)
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200) {
+                return rawFile.responseText; //  Returns the response data as a string
+                // console.log(this.conditionsText); // display text on the console
+            }
+        }
+    };
+    rawFile.send(null);
+  }
 
 }

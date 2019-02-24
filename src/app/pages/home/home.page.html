@@ -20,6 +20,8 @@
 </div>
 
 <!-- Nationality and Conditions for google accounts -->
-<app-google-account *ngIf="isLogin" ></app-google-account>
+<app-google-account 
+(closeAccount) = "closeAccount()"
+*ngIf="isLogin && isCloseAccount" ></app-google-account>
 
 

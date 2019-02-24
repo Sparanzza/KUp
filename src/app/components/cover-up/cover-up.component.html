@@ -10,7 +10,7 @@ class="main-cover">
     <div class="titleCover" *ngIf="showConditions">
         CONDITIONS
     </div>
-    <ion-content>
+    <ion-content *ngIf="!showConditions">
         <ion-virtual-scroll
         *ngIf="showFlags" 
         [items]="countries"
@@ -25,19 +25,28 @@ class="main-cover">
         </ion-virtual-scroll>
       </ion-content>
 
-      <ion-content *ngIf="showConditions">
-        <p class="textConditions">
-            conditions (...) conditions (...) conditions (...) 
-            conditions (...) conditions (...) conditions (...) 
-            conditions (...) conditions (...) conditions (...) 
-            conditions (...) conditions (...) conditions (...) 
-            conditions (...) conditions (...) conditions (...) 
+      <ion-content 
+      [scrollY] = "false"
+      *ngIf="showConditions" style = "height: 75%">
+        <p *ngIf="showConditions" class="textConditions">
+          {{this.conditionsText}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida enim rhoncus odio scelerisque, eu pretium erat venenatis. Suspendisse augue est, posuere condimentum aliquet nec, convallis vel leo. In ipsum ligula, molestie ac vulputate id, aliquet dapibus sapien. Fusce sodales ultricies tellus, in porttitor urna commodo vitae. Nulla placerat convallis ante in fermentum. Nulla nulla urna, lobortis non viverra a, sagittis ac ipsum. Praesent vel lorem in enim ultrices porttitor. Phasellus dictum felis non varius bibendum. Vivamus fringilla justo eget urna pharetra suscipit. Fusce et cursus turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
         </p>
       </ion-content>
+
+
       <div *ngIf="showConditions" class="btn-conditions">
-          <btn-main-menu expand="block" class = "btn-left"
+          <btn-main-menu expand="block" class = "btn-left" (click) = 'setConditions("ACCEPT_CONDITIONS")'
           [iWidth]='150' [btnText] = "'Accept'"> </btn-main-menu>
-          <btn-main-menu  expand="block" class = "btn-right"
+          <btn-main-menu  expand="block" class = "btn-right" (click) = 'setConditions("DECLINE_CONDITIONS")'
           [iWidth]='150' [btnText] = "'Decline'"> </btn-main-menu>
       </div>
 </div>
