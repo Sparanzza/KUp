@@ -16,7 +16,9 @@ export class HomePage implements OnInit {
   isloadingEnd = false; // this var remove progress bar when finish
   isLoadStartOk = false; // check whether pass all functions from service
   isLogin = false;
+  isInGame = false;
   isCloseAccount = true;
+  openBgPosition = 0;
 
   constructor(
     private androidFullScreen: AndroidFullScreen,
@@ -53,8 +55,13 @@ export class HomePage implements OnInit {
   }
 
   closeAccount() {
-    this.isCloseAccount = false; 
+    this.isCloseAccount = false;
+    this.isInGame = true;
+    this.openBgPosition = -140;
   }
+
+  clickChallenge() {}
+  clickFun() {}
 }
 
 // https://github.com/ionic-team/ionic-cli/issues/559

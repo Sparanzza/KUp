@@ -1,5 +1,11 @@
 <!-- Background with main buttons menu -->
-<main-menu-bg></main-menu-bg>
+<div class="backBG2"></div>
+<main-menu-bg
+[ngStyle]="{'top.px': openBgPosition }">
+</main-menu-bg>
+
+<!-- mini user container -->
+
 
 <!-- logo with cronometer -->
 <big-logo></big-logo>
@@ -20,8 +26,17 @@
 </div>
 
 <!-- Nationality and Conditions for google accounts -->
-<app-google-account 
-(closeAccount) = "closeAccount()"
+<app-google-account (closeAccount) = "closeAccount()"
 *ngIf="isLogin && isCloseAccount" ></app-google-account>
+
+<!-- Main menu -->
+<div *ngIf="isInGame" class = "btn-logins">
+        <btn-main-menu 
+        (touchstart)="clickFun($event)"
+        [iWidth]='175' [btnText] = "'Fun Now!'"> </btn-main-menu>
+        <btn-main-menu
+        (touchstart)="clickChallenge($event)"
+        [iWidth]='175' [btnText] = "'Challenger'"> </btn-main-menu>
+    </div>
 
 

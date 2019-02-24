@@ -3,7 +3,9 @@ main-menu-bg{
     z-index: 0;
     width: 100%;
     height: 100%;
+    top: 0px;
     position:absolute;
+    transition: all 0.5s ease;
 }
 
 btn-main-menu{
@@ -26,7 +28,6 @@ btn-main-menu{
 
 .btn-logins{
     width: 100%;
-    height: 80px;
     position: absolute;
     bottom: 20%;
 
@@ -42,3 +43,11 @@ app-google-account{
     transform: transalateZ(0);
 }
 
+.backBG2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #293B5A;
+    top:0px;
+    left: 0%;
+}

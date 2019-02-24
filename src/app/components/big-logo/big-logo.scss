@@ -1,6 +1,6 @@
 :host{
-	width: 350px;
-	height: 350px;
+	width: 280px;
+	height: 280px;
 	margin: 0 auto;
 	position: relative;
 	transform: translateZ(0);
@@ -8,54 +8,57 @@
 }
 
 .main-big-logo {
-	width: 350px;
-	height: 350px;
+	width: 280px;
+	height: 280px;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	position: absolute;
-	transform: translateZ(0) scaleX(0.8) scaleY(0.8);
+	// transform: translateZ(0) scaleX(0.8) scaleY(0.8);
+	transform: translateZ(0) scaleX(1) scaleY(1);
 	top :50px;
 }
 
 .text-big-logo {
+
 	position: absolute;
 	color: rgb(255, 255, 255);
 	font-family: "Titillium Web";
 	font-weight: 800;
 	text-shadow: rgb(201, 207, 206) 0px 1px 0px, rgb(188, 194, 194) 0px 2px 0px, rgb(175, 182, 182) 0px 3px 0px, rgb(164, 173, 172) 0px 4px 0px, rgb(159, 168, 167) 0px 5px 0px, rgb(153, 163, 162) 0px 6px 0px, rgb(151, 161, 160) 0px 7px 0px, rgb(148, 158, 157) 0px 8px 0px, rgba(0, 0, 0, 0.05) 0px 0px 5px, rgba(0, 0, 0, 0.2) 0px 1px 3px, rgba(0, 0, 0, 0.2) 0px 3px 5px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.2) 0px 10px 10px, rgba(0, 0, 0, 0.3) 0px 20px 20px;
-	font-size: 120px;
-	width: 350px;
-	height: 350px;
+	font-size: 115px;
+	width: 280px;
+	height: 280px;
 	text-align: center;
 	vertical-align: middle;
-	top:60px;
+	top:35px;
 	transform: translateZ(0);
 	transform-style: preserve-3d;
+	left: 5px;
   }
-  .big-logo__border-gradient {
+//   .big-logo__border-gradient {
+// 	position: absolute;
+// 	stroke: url("#grad1237");
+// 	fill: none;
+// 	width: 350px;
+// 	height: 350px;
+// 	stroke-width: 12px;
+// 	stroke-dasharray: 0;
+// 	stroke-dashoffset: 0;
+// 	transform: translateZ(0);
+// 	transform-style: preserve-3d;
+//   }
+
+  .big-logo__border-time {
 	position: absolute;
-	stroke: url("#grad1237");
-	fill: none;
-	width: 350px;
-	height: 350px;
+	width: 280px;
+	height: 280px;
 	stroke-width: 12px;
 	stroke-dasharray: 0;
 	stroke-dashoffset: 0;
 	transform: translateZ(0);
 	transform-style: preserve-3d;
+  }
 
-  }
-  .color-bg-reference {
-	position: absolute;
-	width: 350px;
-	height: 350px;
-	left: 0px;
-	top: 0px;
-	background-image: none;
-	background-color: rgb(39, 42, 52);
-	transform: translateZ(0);
-	transform-style: preserve-3d;
-  }
   .big-logo__blur-filter {
 	//  filter: blur(8px);
   }

@@ -56,8 +56,9 @@ export class CoverUpComponent implements AfterViewInit {
   }
 
    setConditions( event ) {
-
-    this.conditions.emit( event );
+      this.showConditions = false;
+      this.isLoading = true;
+      this.conditions.emit( event );
     // this.coverHeight = 0;
   }
 
