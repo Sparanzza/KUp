@@ -1,5 +1,6 @@
 <!-- Background with main buttons menu -->
 <div class="backBG2"></div>
+<div class="backBG2Shadow"></div>
 <main-menu-bg
 [ngStyle]="{'top.px': openBgPosition }">
 </main-menu-bg>
@@ -19,9 +20,9 @@
         <btn-main-menu 
         (touchstart)="clickLogin($event)"
         [iWidth]='175' [btnText] = "'Login'"> </btn-main-menu>
-        <btn-main-menu
+        <btn-outline
         (touchstart)="clickGuest($event)"
-        [iWidth]='175' [btnText] = "'Guest'"> </btn-main-menu>
+        [iWidth]='175' [btnText] = "'Guest'"> </btn-outline>
     </div>
 </div>
 
@@ -30,13 +31,14 @@
 *ngIf="isLogin && isCloseAccount" ></app-google-account>
 
 <!-- Main menu -->
+<top-user></top-user>
 <div *ngIf="isInGame" class = "btn-logins">
-        <btn-main-menu 
-        (touchstart)="clickFun($event)"
-        [iWidth]='175' [btnText] = "'Fun Now!'"> </btn-main-menu>
-        <btn-main-menu
-        (touchstart)="clickChallenge($event)"
-        [iWidth]='175' [btnText] = "'Challenger'"> </btn-main-menu>
-    </div>
+    <btn-main-menu 
+    (touchstart)="clickFun($event)"
+    [iWidth]='246' [btnText] = "'Fun Now!'"> </btn-main-menu>
+    <btn-main-menu
+    (touchstart)="clickChallenge($event)"
+    [iWidth]='246' [btnText] = "'Challenger'"> </btn-main-menu>
+</div>
 
 

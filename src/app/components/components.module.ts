@@ -10,6 +10,10 @@ import { ProgressBarComponent } from './progress-bar/progress-bar';
 import { CoverUpComponent } from './cover-up/cover-up.component';
 import { GoogleAccountComponent } from './google-account/google-account.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { BtnOutlineComponent } from './btn-outline/btn-outline.component';
+import { TopUserComponent } from './top-user/top-user.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { BtnSubmenuComponent } from './btn-submenu/btn-submenu.component';
 
 @NgModule({
     declarations: [SplashComponent,
@@ -21,7 +25,11 @@ import { DropdownComponent } from './dropdown/dropdown.component';
         CoverUpComponent,
         GoogleAccountComponent,
         DropdownComponent,
-        GoogleAccountComponent
+        GoogleAccountComponent,
+        BtnOutlineComponent,
+        TopUserComponent,
+        AboutUsComponent,
+        BtnSubmenuComponent
     ],
     imports: [
 
@@ -35,7 +43,9 @@ import { DropdownComponent } from './dropdown/dropdown.component';
         LoadingComponent,
         ProgressBarComponent,
         CoverUpComponent,
-        GoogleAccountComponent
+        GoogleAccountComponent,
+        BtnOutlineComponent,
+        TopUserComponent
     ]
 })
 export class ComponentsModule {}

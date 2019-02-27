@@ -1,0 +1,97 @@
+:host{
+    top: 20px;
+    left: 10px;
+    position: absolute;
+}
+
+.btn-base-color {
+    width: 243px;
+    left: 0px;
+    top: 0px;
+    height: 42px;
+    background-color: rgb(0, 201, 255);
+    border-radius: 22px;
+    position: relative;
+    text-align: center;
+    display: table;
+  }
+  .btn-base-color-glow {
+    width: 243px;
+    left: 0px;
+    top: 0px;
+    height: 42px;
+    background-color: rgb(0, 201, 255);
+    border-radius: 22px;
+    text-align: center;
+    display: table;
+    position: absolute;
+    mix-blend-mode: screen;
+  }
+  .name-text {
+    font-family: "Titillium Web";
+    line-height: 24px;
+    vertical-align: middle;
+    display: table-cell;
+    color: rgb(0, 201, 255);
+    font-weight: 700;
+    top: 0px;
+    position: relative;
+    left: 0px;
+  }
+  .fullname-text {
+    font-family: "Titillium Web";
+    line-height: 24px;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    left: 0px;
+    color: rgb(123, 150, 196);
+    font-weight: 600;
+    top: 16px;
+  }
+  .level-text {
+    font-family: "Titillium Web";
+    line-height: 24px;
+    vertical-align: middle;
+    display: table-cell;
+    color: rgb(0, 201, 255);
+    top: 0px;
+    position: relative;
+    left: 5px;
+    font-weight: 400;
+  }
+  .main-btn {
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+  .grp-Line1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  .grp-text {
+    position: relative;
+    float: left;
+    top: 12px;
+    left: 12px;
+  }
+  .photo {
+    width: 78px;
+    height: 78px;
+    position: relative;
+    float: left;
+    background: white;
+    border-radius: 55px;
+    filter: drop-shadow(rgba(18, 40, 72, 0.7) 4px 4px 1rem);
+  }
+  .flag {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: white;
+    border-radius: 55px;
+    filter: drop-shadow(rgba(18, 40, 72, 0.7) 4px 4px 1rem);
+    top: 52px;
+    left: 58px;
+  }

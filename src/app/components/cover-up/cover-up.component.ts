@@ -32,7 +32,7 @@ export class CoverUpComponent implements AfterViewInit {
   ngAfterViewInit() {
     // https://stackoverflow.com/questions/39787038/how-to-manage-angular2-expression-has-changed-after-it-was-checked-exception-w
     timer(100).subscribe( () => {
-      this.coverHeight = 90;
+      this.coverHeight = 85;
       this.cdRef.detectChanges();
       this.isLoading = true;
      });
@@ -61,10 +61,6 @@ export class CoverUpComponent implements AfterViewInit {
       this.conditions.emit( event );
     // this.coverHeight = 0;
   }
-
-
-
-
 
   readTextFile(file) {
     const rawFile = new XMLHttpRequest();
