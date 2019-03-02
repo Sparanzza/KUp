@@ -14,6 +14,7 @@ import { BtnOutlineComponent } from './btn-outline/btn-outline.component';
 import { TopUserComponent } from './top-user/top-user.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BtnSubmenuComponent } from './btn-submenu/btn-submenu.component';
+import { BtnGrpSubmenuComponent } from './btn-grp-submenu/btn-grp-submenu.component';
 
 @NgModule({
     declarations: [SplashComponent,
@@ -29,7 +30,8 @@ import { BtnSubmenuComponent } from './btn-submenu/btn-submenu.component';
         BtnOutlineComponent,
         TopUserComponent,
         AboutUsComponent,
-        BtnSubmenuComponent
+        BtnSubmenuComponent,
+        BtnGrpSubmenuComponent
     ],
     imports: [
 
@@ -45,7 +47,11 @@ import { BtnSubmenuComponent } from './btn-submenu/btn-submenu.component';
         CoverUpComponent,
         GoogleAccountComponent,
         BtnOutlineComponent,
-        TopUserComponent
+        TopUserComponent,
+        AboutUsComponent,
+        BtnSubmenuComponent,
+        BtnGrpSubmenuComponent
     ]
 })
 export class ComponentsModule {}
+

@@ -31,14 +31,17 @@
 *ngIf="isLogin && isCloseAccount" ></app-google-account>
 
 <!-- Main menu -->
-<top-user></top-user>
-<div *ngIf="isInGame" class = "btn-logins">
-    <btn-main-menu 
-    (touchstart)="clickFun($event)"
-    [iWidth]='246' [btnText] = "'Fun Now!'"> </btn-main-menu>
-    <btn-main-menu
-    (touchstart)="clickChallenge($event)"
-    [iWidth]='246' [btnText] = "'Challenger'"> </btn-main-menu>
+<div *ngIf="isInGame">
+    <top-user></top-user>
+    <div class = "btn-logins">
+        <btn-main-menu 
+        (touchstart)="clickFun($event)"
+        [iWidth]='246' [btnText] = "'Fun Now!'"> </btn-main-menu>
+        <btn-main-menu
+        (touchstart)="clickChallenge($event)"
+        [iWidth]='246' [btnText] = "'Challenger'"> </btn-main-menu>
+    </div>
+    <btn-grp-submenu></btn-grp-submenu>
 </div>
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-btn-submenu',
+  selector: 'btn-submenu',
   templateUrl: './btn-submenu.component.html',
   styleUrls: ['./btn-submenu.component.scss']
 })
