@@ -1,4 +1,10 @@
-<div class="main-btn-submenu">
-  <img id="config" class="submenu__icon">
-  <p class="submenu__text">Statistics</p>
-</div>
+
+  <div
+  (touchstart)="btnTouchstart()"
+  (touchend)="btnTouchend()"
+  class="pushzone"></div>
+  <img class="submenu__icon" [ngStyle]="{'-webkit-mask-image': 'url(' + btnImgUrl +')'}">
+  <p class="submenu__text">{{btnText}}</p>
+  <div 
+  *ngIf="this.bLightClicked"
+  class ="btn-highLight"></div>

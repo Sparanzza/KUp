@@ -52,6 +52,7 @@ export class HomePage implements OnInit {
   }
   clickGuest(e) {
     console.log(e);
+    this.closeAccount();
   }
 
   closeAccount() {
