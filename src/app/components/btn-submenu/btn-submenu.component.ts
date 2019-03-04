@@ -17,12 +17,13 @@ export class BtnSubmenuComponent implements OnInit {
   }
 
   btnTouchstart() {
-    console.log('submenu');
+    console.log(this.btnText);
     this.bLightClicked = true;
   }
 
   btnTouchend() {
-    this.bLightClicked = false;
+    setTimeout(() => {
+      this.bLightClicked = false; }, 500);
   }
 
 

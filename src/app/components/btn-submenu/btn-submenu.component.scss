@@ -36,19 +36,20 @@
 
   .btn-highLight{
     width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
+    height: 140px;
     background-color: var(--kup-primary);
-    position: fixed;
+    position: absolute;
+    z-index: 2;
     mix-blend-mode: color;
   }
 
   .pushzone{
     width: 100%;
-    height: 100%;
-    top: 0px;
+    height: 140px;
+    /* bottom: 0px; */
     left: 0px;
-    opacity :1;
-    position: fixed;
+    opacity: .3;
+    /* background: red; */
+    position: absolute;
+    z-index: 2;
   }
