@@ -15,6 +15,7 @@ import { TopUserComponent } from './top-user/top-user.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BtnSubmenuComponent } from './btn-submenu/btn-submenu.component';
 import { BtnGrpSubmenuComponent } from './btn-grp-submenu/btn-grp-submenu.component';
+import { FunnowSelectLevelComponent } from './funnow-select-level/funnow-select-level.component';
 
 @NgModule({
     declarations: [SplashComponent,
@@ -31,7 +32,8 @@ import { BtnGrpSubmenuComponent } from './btn-grp-submenu/btn-grp-submenu.compon
         TopUserComponent,
         AboutUsComponent,
         BtnSubmenuComponent,
-        BtnGrpSubmenuComponent
+        BtnGrpSubmenuComponent,
+        FunnowSelectLevelComponent
     ],
     imports: [
 
