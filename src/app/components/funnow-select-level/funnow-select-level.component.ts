@@ -34,12 +34,13 @@ export class FunnowSelectLevelComponent implements OnInit {
       default:
 
       }
-      
-              // obtener nivel
-      
-              // checkear si es how to play
-      
-              // salir level
-      this.exitLevel.emit();
+
+      // obtener nivel
+
+      // checkear si es how to play
+
+      // salir level
+
+      this.exitLevel.emit('SUCCESS');
   }
 }

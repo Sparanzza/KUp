@@ -9,9 +9,6 @@
 [ngStyle]="{'top.px': openBgPosition }">
 </main-menu-bg>
 
-<!-- mini user container -->
-
-
 <!-- logo with cronometer -->
 <big-logo></big-logo>
 
@@ -19,49 +16,40 @@
 <progress-bar *ngIf="!isloadingEnd" [progressBarValue] = 'progressBarValue'></progress-bar>
 
 <!-- Login -->
-<div *ngIf="!isLogin && isTypeOfGame" >
-    <div *ngIf="isloadingEnd" class = "btn-logins">
-        <btn-main-menu 
-        (touchstart)="clickLogin($event)"
-        [iWidth]='175' [btnText] = "'Login'"> </btn-main-menu>
-        <btn-outline
-        (touchstart)="clickGuest($event)"
-        [iWidth]='175' [btnText] = "'Guest'"> </btn-outline>
-    </div>
+<div *ngIf="isloadingEnd && isLogin" class = "btn-logins">
+    <btn-main-menu 
+    (touchstart)="clickExitLogin('LOGIN')"
+    [iWidth]='175' [btnText] = "'Login'"> </btn-main-menu>
+    <btn-outline
+    (touchstart)="clickExitLogin('GUEST')"
+    [iWidth]='175' [btnText] = "'Guest'"> </btn-outline>
 </div>
 
 <!-- Nationality and Conditions for google accounts -->
 <app-google-account (closeAccount) = "closeAccount()"
-*ngIf="isLogin && isCloseAccount" ></app-google-account>
+*ngIf="!isLogin && isCloseAccount" ></app-google-account>
 
 <!-- Main menu -->
 <div *ngIf="isInGame">
-    <!-- Data from top user google -->
     <top-user></top-user>
-    <!-- buttom about us -->
     <about-us></about-us>
-
-    <div *ngIf="isTypeOfGame">
-        <div
-        class = "btn-logins">
-            <btn-main-menu
-            (touchstart)="clickSelectMode(0)"
-            [iWidth]='246' [btnText] = "'Challenger'"> </btn-main-menu>
-            <btn-main-menu 
-            (touchstart)="clickSelectMode(1)"
-            [iWidth]='246' [btnText] = "'Fun Now!'"> </btn-main-menu>
-        </div>
-    </div>
-    
-    <!-- FUN MODE -->
-    <div *ngIf="isFunMode">
-        <funnow-select-level (exitLevel) ="exitLevel()"></funnow-select-level>
-    </div>
-    
-    <!-- CHALLENGER MODE -->
-    <div *ngIf="isChallenger">
-    
+    <div class = "btn-logins">
+        <btn-main-menu
+        (touchstart)="clickSelectMode(0)"
+        [iWidth]='246' [btnText] = "'Challenger'"> </btn-main-menu>
+        <btn-main-menu 
+        (touchstart)="clickSelectMode(1)"
+        [iWidth]='246' [btnText] = "'Fun Now!'"> </btn-main-menu>
     </div>
 </div>
+    
+    <!-- FUN MODE -->
+<div *ngIf="isFunMode">
+    <funnow-select-level (exitLevel) ="exitLevel()"></funnow-select-level>
+</div>
 
+<!-- CHALLENGER MODE -->
+<div *ngIf="isChallenger">
+
+</div>
 

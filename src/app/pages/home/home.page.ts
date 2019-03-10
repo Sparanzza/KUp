@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   progressBarValue = 0; // value progressBar local got from service
   isloadingEnd = false; // this var remove progress bar when finish
   isLoadStartOk = false; // check whether pass all functions from service
-  isLogin = false;
+  isLogin = true;
   isInGame = false;
   isCloseAccount = true;
   isTypeOfGame = true;
@@ -50,13 +50,12 @@ export class HomePage implements OnInit {
     });
   }
 
-  clickLogin(e) {
+  clickExitLogin(e) {
     // console.log(e);
-    this.isLogin = true;
-  }
-  clickGuest(e) {
-    // console.log(e);
-    this.closeAccount();
+    this.isLogin = false;
+    if (e === 'GUEST') {
+      this.closeAccount();
+    }
   }
 
   closeAccount() {
@@ -70,18 +69,21 @@ export class HomePage implements OnInit {
   clickSelectMode( select: number) {
     this.openBgPosition = 0;
     this.subMenu = false;
+    this.isInGame = false;
     if (select === 0) {
       console.log('challenger');
     } else if ( select === 1 ) {
       console.log('funmode');
       this.isFunMode = true;
     }
-    this.isTypeOfGame = false;
   }
 
   exitLevel() {
     this.isFunMode = false;
     console.log('exit fun mode');
+
+    // chekear si mostramos how to play
+
   }
 }
 
