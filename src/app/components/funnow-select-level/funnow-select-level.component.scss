@@ -1,0 +1,22 @@
+:host{
+    width: 100%;
+    position: absolute;
+    bottom: 20%;
+    height: 250px;
+
+}
+.titleCover{
+    font-family: "Titillium Web";
+    font-weight: 200;
+    font-size: 32px;
+    text-align: center;
+    width: 100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    color: var(--kup-secondary-blue);
+}
+
+ion-row{
+   padding:6px;
+}
+

@@ -52,7 +52,8 @@ import { FunnowSelectLevelComponent } from './funnow-select-level/funnow-select-
         TopUserComponent,
         AboutUsComponent,
         BtnSubmenuComponent,
-        BtnGrpSubmenuComponent
+        BtnGrpSubmenuComponent,
+        FunnowSelectLevelComponent
     ]
 })
 export class ComponentsModule {}

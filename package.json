@@ -94,7 +94,8 @@
       "cordova-plugin-device-orientation": {}
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

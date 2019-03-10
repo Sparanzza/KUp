@@ -2,7 +2,7 @@
 <div class="backBG2"></div>
 
 <btn-grp-submenu
-*ngIf="isInGame"></btn-grp-submenu>
+*ngIf="subMenu"></btn-grp-submenu>
 
 <div class="backBG2Shadow"></div>
 <main-menu-bg
@@ -19,7 +19,7 @@
 <progress-bar *ngIf="!isloadingEnd" [progressBarValue] = 'progressBarValue'></progress-bar>
 
 <!-- Login -->
-<div *ngIf="!isLogin" >
+<div *ngIf="!isLogin && isTypeOfGame" >
     <div *ngIf="isloadingEnd" class = "btn-logins">
         <btn-main-menu 
         (touchstart)="clickLogin($event)"
@@ -36,24 +36,32 @@
 
 <!-- Main menu -->
 <div *ngIf="isInGame">
+    <!-- Data from top user google -->
     <top-user></top-user>
-    <div class = "btn-logins">
-        <btn-main-menu 
-        (touchstart)="clickFun($event)"
-        [iWidth]='246' [btnText] = "'Fun Now!'"> </btn-main-menu>
-        <btn-main-menu
-        (touchstart)="clickChallenge($event)"
-        [iWidth]='246' [btnText] = "'Challenger'"> </btn-main-menu>
+    <!-- buttom about us -->
+    <about-us></about-us>
+
+    <div *ngIf="isTypeOfGame">
+        <div
+        class = "btn-logins">
+            <btn-main-menu
+            (touchstart)="clickSelectMode(0)"
+            [iWidth]='246' [btnText] = "'Challenger'"> </btn-main-menu>
+            <btn-main-menu 
+            (touchstart)="clickSelectMode(1)"
+            [iWidth]='246' [btnText] = "'Fun Now!'"> </btn-main-menu>
+        </div>
+    </div>
+    
+    <!-- FUN MODE -->
+    <div *ngIf="isFunMode">
+        <funnow-select-level (exitLevel) ="exitLevel()"></funnow-select-level>
+    </div>
+    
+    <!-- CHALLENGER MODE -->
+    <div *ngIf="isChallenger">
+    
     </div>
 </div>
 
-<!-- FUN MODE -->
-<div *ngIf="isFunMode">
-    <funnow-select-level></funnow-select-level>
-</div>
-
-<!-- CHALLENGER MODE -->
-<div *ngif = "isChallenger">
-
-</div>
 

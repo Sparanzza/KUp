@@ -1,14 +1,38 @@
-<div class = "btn-Level">
-    <btn-main-menu 
-    (touchstart)="clickLevel(0)"
-    [iWidth]='175' [btnText] = "'Beginner'"> </btn-main-menu>
-    <btn-outline
-    (touchstart)="clickLevel(0)"
-    [iWidth]='175' [btnText] = "'Normal'"> </btn-outline>
-    <btn-outline
-    (touchstart)="clickLevel(0)"
-    [iWidth]='175' [btnText] = "'Dificult'"> </btn-outline>
-    <btn-outline
-    (touchstart)="clickLevel(0)"
-    [iWidth]='175' [btnText] = "'Expert'"> </btn-outline>
-</div>
+<ion-grid>
+        <ion-row justify-content-center padding>
+            <div class="titleCover">SELECT LEVEL</div>
+        </ion-row>  
+        <ion-row justify-content-center >
+                <btn-outline
+                (touchstart)="clickLevel('BEGINNER')"
+                [iWidth]="175"
+                [btnText]="'Beginner'"
+              >
+            </btn-outline>  
+        </ion-row>  
+        <ion-row justify-content-center >
+                <btn-outline
+                (touchstart)="clickLevel('NORMAL')"
+                [iWidth]="175"
+                [btnText]="'Normal'"
+              >
+            </btn-outline>  
+        </ion-row>  
+        <ion-row justify-content-center >
+                <btn-outline
+                (touchstart)="clickLevel('DIFICULT')"
+                [iWidth]="175"
+                [btnText]="'Dificult'"
+              >
+            </btn-outline>  
+        </ion-row>  
+        <ion-row justify-content-center >
+                <btn-outline
+                (touchstart)="clickLevel('EXPERT')"
+                [iWidth]="175"
+                [btnText]="'Expert'"
+              >
+            </btn-outline>  
+        </ion-row>  
+</ion-grid>
+

@@ -10,7 +10,7 @@ export class MainMenuBgComponent implements DoCheck {
   constructor() { }
 
   ngDoCheck() {
-    console.log('ngDoCheck');
+
   }
 
 }

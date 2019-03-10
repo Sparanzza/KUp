@@ -18,6 +18,10 @@ export class HomePage implements OnInit {
   isLogin = false;
   isInGame = false;
   isCloseAccount = true;
+  isTypeOfGame = true;
+  isChallenger = false;
+  isFunMode = false;
+  subMenu = false;
   openBgPosition = 0;
 
   constructor(
@@ -47,22 +51,38 @@ export class HomePage implements OnInit {
   }
 
   clickLogin(e) {
-    console.log(e);
+    // console.log(e);
     this.isLogin = true;
   }
   clickGuest(e) {
-    console.log(e);
+    // console.log(e);
     this.closeAccount();
   }
 
   closeAccount() {
     this.isCloseAccount = false;
+    this.subMenu = true;
     this.isInGame = true;
     this.openBgPosition = -140;
+    console.log('closeaccount');
   }
 
-  clickChallenge() {}
-  clickFun() {}
+  clickSelectMode( select: number) {
+    this.openBgPosition = 0;
+    this.subMenu = false;
+    if (select === 0) {
+      console.log('challenger');
+    } else if ( select === 1 ) {
+      console.log('funmode');
+      this.isFunMode = true;
+    }
+    this.isTypeOfGame = false;
+  }
+
+  exitLevel() {
+    this.isFunMode = false;
+    console.log('exit fun mode');
+  }
 }
 
 // https://github.com/ionic-team/ionic-cli/issues/559
