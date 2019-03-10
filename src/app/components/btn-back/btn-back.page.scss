@@ -1,0 +1,16 @@
+:host{
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
+
+.submenu__icon {
+    height: 32px;
+    width: 32px;
+    background: var(--kup-secondary-blue);
+    border-color: transparent;
+    mask-image: url("/assets/imgs/icons-menu/btn-back.svg");
+    position: relative;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }

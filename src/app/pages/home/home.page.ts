@@ -21,6 +21,7 @@ export class HomePage implements OnInit {
   isTypeOfGame = true;
   isChallenger = false;
   isFunMode = false;
+  isHowToPlay = false;
   subMenu = false;
   openBgPosition = 0;
 
@@ -78,9 +79,19 @@ export class HomePage implements OnInit {
     }
   }
 
-  exitLevel() {
+  exitLevel(event) {
+
     this.isFunMode = false;
-    console.log('exit fun mode');
+    if (event === 'SUCCESS') {
+      // TODO OR CHECK HOE TO PLAY
+      if (true) {
+        this.isHowToPlay = true;
+      }
+      console.log('exit fun mode');
+    } else if ( event === 'BACK') {
+      this.closeAccount();
+
+    }
 
     // chekear si mostramos how to play
 

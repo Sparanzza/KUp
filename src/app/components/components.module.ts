@@ -16,6 +16,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { BtnSubmenuComponent } from './btn-submenu/btn-submenu.component';
 import { BtnGrpSubmenuComponent } from './btn-grp-submenu/btn-grp-submenu.component';
 import { FunnowSelectLevelComponent } from './funnow-select-level/funnow-select-level.component';
+import { HowToPlayPage } from './how-to-play/how-to-play.page';
+import { BtnBackPage } from './btn-back/btn-back.page';
+import { BtnPausePage } from './btn-pause/btn-pause.page';
 
 @NgModule({
     declarations: [SplashComponent,
@@ -33,7 +36,10 @@ import { FunnowSelectLevelComponent } from './funnow-select-level/funnow-select-
         AboutUsComponent,
         BtnSubmenuComponent,
         BtnGrpSubmenuComponent,
-        FunnowSelectLevelComponent
+        FunnowSelectLevelComponent,
+        HowToPlayPage,
+        BtnBackPage,
+        BtnPausePage
     ],
     imports: [
 
@@ -53,7 +59,11 @@ import { FunnowSelectLevelComponent } from './funnow-select-level/funnow-select-
         AboutUsComponent,
         BtnSubmenuComponent,
         BtnGrpSubmenuComponent,
-        FunnowSelectLevelComponent
+        FunnowSelectLevelComponent,
+        HowToPlayPage,
+        BtnBackPage,
+        BtnPausePage
+
     ]
 })
 export class ComponentsModule {}

@@ -43,4 +43,8 @@ export class FunnowSelectLevelComponent implements OnInit {
 
       this.exitLevel.emit('SUCCESS');
   }
+
+  clickBack(event) {
+    this.exitLevel.emit('BACK');
+  }
 }
