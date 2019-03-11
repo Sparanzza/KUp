@@ -47,7 +47,9 @@
 <funnow-select-level
 *ngIf="isFunMode"
 (exitLevel) ="exitLevel($event)"></funnow-select-level>
-<how-to-play *ngIf="isHowToPlay"></how-to-play>
+<how-to-play
+(howToPlay) = "howToPlay($event)"
+*ngIf="isHowToPlay"></how-to-play>
 
 <!-- CHALLENGER MODE -->
 <div *ngIf="isChallenger">

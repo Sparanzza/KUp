@@ -16,6 +16,7 @@
 	// transform: translateZ(0) scaleX(0.8) scaleY(0.8);
 	transform: translateZ(0) scaleX(1) scaleY(1);
 	top :90px;
+	// transform: translateY(-265px);
 }
 
 .text-big-logo {
@@ -35,18 +36,7 @@
 	transform-style: preserve-3d;
 	left: 5px;
   }
-//   .big-logo__border-gradient {
-// 	position: absolute;
-// 	stroke: url("#grad1237");
-// 	fill: none;
-// 	width: 350px;
-// 	height: 350px;
-// 	stroke-width: 12px;
-// 	stroke-dasharray: 0;
-// 	stroke-dashoffset: 0;
-// 	transform: translateZ(0);
-// 	transform-style: preserve-3d;
-//   }
+
 
   .big-logo__border-time {
 	position: absolute;

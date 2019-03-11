@@ -19,6 +19,8 @@ import { FunnowSelectLevelComponent } from './funnow-select-level/funnow-select-
 import { HowToPlayPage } from './how-to-play/how-to-play.page';
 import { BtnBackPage } from './btn-back/btn-back.page';
 import { BtnPausePage } from './btn-pause/btn-pause.page';
+import { FunnowGamePage } from './funnow-game/funnow-game.page';
+import { HowToPlaySlideshowPage } from './how-to-play-slideshow/how-to-play-slideshow.page';
 
 @NgModule({
     declarations: [SplashComponent,
@@ -39,7 +41,9 @@ import { BtnPausePage } from './btn-pause/btn-pause.page';
         FunnowSelectLevelComponent,
         HowToPlayPage,
         BtnBackPage,
-        BtnPausePage
+        BtnPausePage,
+        FunnowGamePage,
+        HowToPlaySlideshowPage
     ],
     imports: [
 
@@ -62,7 +66,9 @@ import { BtnPausePage } from './btn-pause/btn-pause.page';
         FunnowSelectLevelComponent,
         HowToPlayPage,
         BtnBackPage,
-        BtnPausePage
+        BtnPausePage,
+        FunnowGamePage,
+        HowToPlaySlideshowPage
 
     ]
 })

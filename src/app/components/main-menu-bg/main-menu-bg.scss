@@ -48,3 +48,21 @@
 	top: -200px;
 	left: 50%;
 }
+
+.pattern-tile{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('/assets/imgs/pattern-bg.jpg');
+	background-position: 0% 0%;
+	background-repeat: repeat;
+    background-size: 40%;
+    mix-blend-mode: overlay;
+	opacity: 0.05;
+	animation: TILE-ANIMATION 25s infinite linear;
+}
+
+@keyframes TILE-ANIMATION {
+	0%   { 	background-position: 0% 0%; }
+	100% { 	background-position: 0% -109%; }
+  }

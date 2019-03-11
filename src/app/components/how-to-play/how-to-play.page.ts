@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'how-to-play',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HowToPlayPage implements OnInit {
 
+  @Output() howToPlay: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickHowTo(e) {
+    this.howToPlay.emit(e);
+
   }
 
 }

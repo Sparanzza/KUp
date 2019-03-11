@@ -63,7 +63,7 @@ export class HomePage implements OnInit {
     this.isCloseAccount = false;
     this.subMenu = true;
     this.isInGame = true;
-    this.openBgPosition = -140;
+    this.openBgPosition = -100;
     console.log('closeaccount');
   }
 
@@ -95,6 +95,21 @@ export class HomePage implements OnInit {
 
     // chekear si mostramos how to play
 
+  }
+
+  howToPlay(event) {
+    this.isHowToPlay = false;
+
+    if ( event === false) {
+      // GAME
+      this.FunModeInGame();
+    } else {
+      // HOW TO PLAY
+    }
+  }
+
+  FunModeInGame() {
+    this.openBgPosition = -100;
   }
 }
 
